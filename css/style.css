@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+img{
+    max-width: 100%;
+    display: block;
+    max-height: 100%;
+}
+
+.container{
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    padding: 30px 0;
+}
+header .row{
+    align-items: center;
+}
+.logo{
+    max-width: 20%;
+    flex-basis: 20%;
+}
+
+.logo a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #28377e;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    max-width: 80%;
+    flex-basis: 80%;
+}
+
+nav ul{
+    justify-content: flex-end;
+    list-style: none;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    display: block;
+    padding: 0 14px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    
+    color:#F2642C;
+}
+section.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner .banner-blue{}
+.banner .banner-orange{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+a.click-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    font-size: 16px;
+    transform: translate(-50%);
+    color: #fff;
+    animation-name: click-down;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes click-down{
+    0%{
+        bottom: 50px
+    }
+    50%{
+        bottom: 15px
+    }
+    100%{
+        bottom: 50px
+    }
+
+}
+
+.banner-text{
+
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+max-width: 800px;
+
+text-align: center;
+}
+
+.banner-text h1{
+    font-size: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+
+.whoweare-section{
+    padding: 100px 0 120px;
+}
+
+.whoweare-section .row{
+    align-items: center;
+    justify-content: space-between;
+}
+.whoweare-content{
+    max-width: 50%;
+    flex-basis: 50%;
+    }
+
+.heading{}
+.heading span{
+    background-color: #f2622c;
+    display: block;
+    height: 4px;
+    width: 60px;
+}
+.heading h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: #204f87;
+    padding: 20px 0 25px;
+    text-transform: uppercase;
+}
+p{
+    color: #b0b0b1;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.whoweare-img {
+    max-width: 30%;
+    flex-basis: 30%;
+}
+.whoweare-img img{}
+
+
+.whatwedo-section{
+    background-color: #f7f8f8;
+    background-image: url(../images/whatwedo-bg.png);
+    background-size: 92% 72%;
+    background-repeat: no-repeat;
+    padding: 80px 0px 80px;
+    background-position: bottom right;
+}
+.whatwedo-section .heading{
+    text-align: center;
+    padding-bottom: 35px;
+}
+.whatwedo-section .heading span{
+    margin: 0 auto;
+}
+.whatwedo-section .heading h1{
+}
+
+
+.whatwedo{
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+    padding: 14px;
+}
+.whatwedo-content{
+    position: relative;
+}
+
+.whatwedo-content .overlay{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(43,47,133,0.65) 71%, rgba(43,47,133,0.8) 88%); 
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(43,47,133,0.65) 71%,rgba(43,47,133,0.8) 88%); 
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(43,47,133,0.65) 71%,rgba(43,47,133,0.8) 88%);  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc2b2f85',GradientType=0 ); 
+    
+    position: absolute;
+    bottom: 0;
+    left:0;
+    display: block;
+    height: 0;
+    width: 100%;
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.whatwedo-content:hover .overlay{
+    height: 100%;
+    opacity: 1;
+}
+.whatwedo-content img{}
+
+.whatwedo-content h2{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translate(-0%, -50%);
+    color: #fff;
+    font-size: 26px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.6s;
+}
+.whatwedo-content:hover h2{
+    opacity: 1;
+}
+
+.whatwedo-content a{
+    position: absolute;
+    color: #fff;
+    bottom: 40px;
+    font-size: 30px;
+    left: 20%;
+    transform: translate(-20%);
+    z-index: 1;
+    transition: all 0.8s;
+    opacity: 0;
+}
+
+.whatwedo-content:hover a{
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.ourattorneys-section{
+    background-image: url(../images/attorneys-bg.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 150px 0 150px 0;
+}
+.ourattorneys-section .row{
+    justify-content: space-between;
+}
+.attorneys-left{
+    max-width: 25%;
+    flex-basis: 25%;
+}
+.attorneys-left .heading{
+    margin-top: 115px;
+}
+.heading span{}
+.attorneys-left .heading h1{
+    text-transform: uppercase;
+    color: #fff;
+}
+.attorneys-left p{
+    color: #929dcf;
+    margin-bottom: 30px;
+}
+
+.attorneys-left a{
+    
+text-decoration: none;
+    
+color: #f2652d;
+    
+text-transform: uppercase;
+    
+font-size: 18px;
+}
+
+.attorneys-right{
+    max-width: 70%;
+    flex-basis: 70%;
+}
+.attorneys{
+
+}
+
+.attorneys-content{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.attorneys-content .overlay{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(43,47,133,0.65) 71%, rgba(43,47,133,0.8) 88%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(43,47,133,0.65) 71%,rgba(43,47,133,0.8) 88%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(43,47,133,0.65) 71%,rgba(43,47,133,0.8) 88%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc2b2f85',GradientType=0 );
+    position: absolute;
+    bottom: 0;
+    left:0;
+    display: block;
+    height: 0;
+    width: 100%;
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.attorneys-content:hover .overlay{
+    opacity: 1;
+    height: 100%
+}
+.attorneys-content img{
+}
+.attorneys-content h2{
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 14%;
+    left: 20%;
+    transform: translate(-20%, 14%);
+    color: #fff;
+    font-size: 24px;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.attorneys-content:hover h2{
+    opacity: 1;
+}
+
+.languages-section{
+
+padding: 100px 0px 90px;
+}
+
+.languages-section .heading{
+    text-align: center;
+}
+.languages-section .heading span{
+    margin: 0 auto;
+}
+.languages-section .row{
+    justify-content: space-between;
+}
+.languages-section .col{
+    max-width: 22%;
+    flex-basis: auto;
+    text-align: justify;
+}
+.col h2{
+    text-transform: uppercase;
+    color: #204f87;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.col p{
+    color: #B0B0B1;
+}
+
+.col a{
+    text-decoration: none;
+    color: #f2652d;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+
+.contact-section{
+    background-color: #28377e;
+    padding: 80px 0 110px;}
+.contact-section .heading{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.contact-section .heading h1{color: #fff;}
+.contact-section .heading span{
+    margin: 0 auto;
+}
+.contact-section .row{
+    justify-content: center;
+}
+
+ 
+.contact{
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.contact input{
+    width: 100%;
+    padding: 15px 5px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #4759a7;
+    background-color: transparent;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 2px;
+}
+.contact input[type="submit"]{
+    width: auto;
+    background: #f1602b;
+    border-bottom: 0;
+    padding: 15px 70px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    border-radius: 0;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.contact input[type="submit"]:hover{
+    background-color: #fff;
+    color: #f47b3b;
+}
+
+footer{
+    padding: 45px 0px;
+    background-color: #0c1234;
+}
+footer .row{align-items: center;}
+.copyright{
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.copyright p{
+    color: #616CA8;
+    font-size: 14px;
+    margin: 0;
+}
+.copyright a{
+    text-decoration: none;
+    color: #616CA8;
+}
+.social-list{
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.social-list ul {
+    justify-content: flex-end;
+}
+.social-list ul li{
+    list-style: none;
+}
+
+.social-list ul li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-left: 15px;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.social-list ul li a:hover{
+    color: #f2622c;
+}
+
+.contact input:focus{
+    outline: none;
+    border: 1px solid #4759a7;
+}
+::placeholder{
+    color:#fff;
+}
+
+@media (max-width: 1200px){
+ .container {
+    width: 950px;
+ }
+
+}
+@media (max-width: 1000px){
+.container {
+    width: 750px;
+ }
+ nav ul li a {
+    font-size: 9px;
+    padding: 0 10px;
+}
+.banner-text h1 {
+    font-size: 42px;
+}
+.attorneys-right {
+    max-width: 60%;
+    flex-basis: 60%;
+}
+}
+@media (max-width: 800px){
+.container {
+    width: 550px;
+ }
+ .banner-text h1 {
+    font-size: 30px;
+}
+nav ul li a {
+    font-size: 8px;
+    padding: 0 6px;
+}
+.ourattorneys-section {
+    padding: 85px 0 80px 0;
+}
+.attorneys-right {
+    max-width: 55%;
+    flex-basis: 55%;
+}
+.attorneys-left p {
+    color: #929dcf;
+    margin-bottom: 18px;
+}
+.heading h1 {
+    font-size: 30px;
+}
+.col h2 {
+    font-size: 15px;
+    margin: 8px 0;
+}
+p {
+    font-size: 12px;
+}
+.whoweare-section {
+    padding: 60px 0 55px;
+}
+.whatwedo-section {
+    padding: 50px 0px 50px;
+    background-size: 92% 65%;
+}
+.whatwedo-content h2 {
+    font-size: 20px;
+}
+.attorneys-content h2 {
+    font-size: 20px;
+}
+.languages-section {
+    padding: 50px 0px 60px;
+}
+}
+
+@media (max-width: 600px){
+.container {
+    width: 100%;
+    padding: 0 20px
+ }
+ .logo {
+    max-width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+}
+nav {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-top: 15px;
+}
+nav ul {
+    justify-content: center;
+}
+nav ul li a {
+    font-size: 9px;
+    padding: 0 8px;
+}
+ .banner-text h1 {
+    font-size: 21px;
+}
+a.click-down {
+    display: none;
+}
+.whoweare-section {
+    padding: 50px 0 60px;
+}
+.whatwedo-section {
+    padding: 40px 0px 30px;
+    background-size: 90% 62%;
+}
+.attorneys-right {
+    max-width: 55%;
+    flex-basis: 55%;
+}
+.attorneys-left {
+    max-width: 70%;
+    flex-basis: 70%;
+    margin-bottom: 15px;
+}
+.attorneys-left p {
+    margin-bottom: 14px;
+}
+.ourattorneys-section {
+    padding: 0px 0 70px;
+}
+.attorneys-left .heading {
+    margin-top: 60px;
+}
+.attorneys-content h2 {
+    font-size: 18px;
+}
+.whatwedo-content h2 {
+    font-size: 15px;
+}
+.languages-section {
+    padding: 35px 0px 40px;
+}
+
+.heading h1 {
+    font-size: 30px;
+}
+.heading h1 {
+    font-size: 32px;
+    padding: 15px 0 16px;
+}
+.copyright {
+    max-width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+}
+.social-list {
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.social-list ul {
+    justify-content: center;
+}
+.social-list ul a{
+    padding-top: 10px;
+}
+footer {
+    padding: 25px 0px;
+    }
+}
+
+
