@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,700&display=swap');
 
 * {
 	margin: 0;
@@ -7,11 +7,8 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-a:hover{
-	text-decoration: none;
-}
-a {
-	text-decoration: none;
+body{
+    font-family: 'Open Sans', sans-serif;
 }
 li {
 	list-style: none;
@@ -25,13 +22,6 @@ img {
 	flex-wrap: wrap;
 }
 .container {
-	width: 1100px;
+	width: 1050px;
 	margin: 0 auto;
-}
-p {
-	font-size: 15px;
-	color: #999999;
-}
-body {
-	font-family: 'Lato', sans-serif;
 }

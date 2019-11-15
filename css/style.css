@@ -231,9 +231,9 @@ p{
 .whatwedo-content h2{
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 20%;
     left: 0;
-    transform: translate(-0%, -50%);
+    transform: translate(-0%, -20%);
     color: #fff;
     font-size: 26px;
     width: 100%;
@@ -243,6 +243,9 @@ p{
 }
 .whatwedo-content:hover h2{
     opacity: 1;
+    top: 50%;
+    left: 0;
+    transform: translate(-0%, -50%);
 }
 
 .whatwedo-content a{
@@ -270,9 +273,10 @@ p{
     background-size: cover;
     padding: 150px 0 150px 0;
 }
-.ourattorneys-section .row{
-    justify-content: space-between;
+.ourattorneys-section > .container > .row {
+    justify-content: space-between
 }
+
 .attorneys-left{
     max-width: 25%;
     flex-basis: 25%;
@@ -291,13 +295,9 @@ p{
 }
 
 .attorneys-left a{
-    
 text-decoration: none;
-    
 color: #f2652d;
-    
 text-transform: uppercase;
-    
 font-size: 18px;
 }
 
@@ -305,13 +305,19 @@ font-size: 18px;
     max-width: 70%;
     flex-basis: 70%;
 }
-.attorneys{
-
-}
 
 .attorneys-content{
+    max-width: 50%;
+    flex-basis:50%;
+    padding:10px;
+}
+
+.attorneys{
     position: relative;
-    margin-bottom: 20px;
+}
+
+.attorneys-content img{
+    width: 100%;
 }
 
 .attorneys-content .overlay{
@@ -332,8 +338,6 @@ font-size: 18px;
 .attorneys-content:hover .overlay{
     opacity: 1;
     height: 100%
-}
-.attorneys-content img{
 }
 .attorneys-content h2{
     position: absolute;
@@ -491,11 +495,17 @@ footer .row{align-items: center;}
     color:#fff;
 }
 
+
 @media (max-width: 1200px){
  .container {
     width: 950px;
  }
-
+ .whatwedo-section {
+    background-size: 87% 70%;
+}
+.whatwedo-content h2 {
+    font-size: 24px;
+}
 }
 @media (max-width: 1000px){
 .container {
@@ -508,11 +518,34 @@ footer .row{align-items: center;}
 .banner-text h1 {
     font-size: 42px;
 }
+.whoweare-img {
+    max-width: 40%;
+    flex-basis: 40%;
+}
+.whoweare-content {
+    max-width: 50%;
+    flex-basis: 50%;
+}
 .attorneys-right {
     max-width: 60%;
     flex-basis: 60%;
 }
+.whatwedo-section {
+    background-size: 90% 66%;
 }
+.whatwedo-content h2 {
+    font-size: 22px;
+}
+.ourattorneys-section {
+    padding: 95px 0 90px;
+}
+.attorneys-content h2 {
+    left: 25%;
+    font-size:17px;
+}
+}
+
+
 @media (max-width: 800px){
 .container {
     width: 550px;
@@ -524,49 +557,107 @@ nav ul li a {
     font-size: 8px;
     padding: 0 6px;
 }
-.ourattorneys-section {
-    padding: 85px 0 80px 0;
+a.click-down {
+    animation-duration: 4s;
 }
-.attorneys-right {
-    max-width: 55%;
-    flex-basis: 55%;
-}
-.attorneys-left p {
-    color: #929dcf;
-    margin-bottom: 18px;
+
+@keyframes click-down{
+    0%{
+        bottom: 30px
+    }
+    50%{
+        bottom: 10px
+    }
+    100%{
+        bottom: 30px
+    }
+
 }
 .heading h1 {
     font-size: 30px;
 }
+.whoweare-content .heading span {
+    margin: 0px;
+}
+.heading span {
+    margin: auto;
+}
+
 .col h2 {
-    font-size: 15px;
-    margin: 8px 0;
+    font-size: 20px;
+    text-align: center;
+}
+.col p {
+    font-size: 14px;
+}
+.languages-section .col {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-bottom: 8px;
 }
 p {
     font-size: 12px;
 }
-.whoweare-section {
-    padding: 60px 0 55px;
-}
 .whatwedo-section {
     padding: 50px 0px 50px;
-    background-size: 92% 65%;
+    background-size: 90% 62%;
+}
+.whatwedo-content a {
+    bottom: 25px;
 }
 .whatwedo-content h2 {
     font-size: 15px;
 }
+.ourattorneys-section {
+    padding: 50px 0 70px;
+}
+.ourattorneys-section > .container > .row {
+    justify-content: center;
+}
+.attorneys-left {
+    max-width: 75%;
+    flex-basis: 75%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.attorneys-left .heading {
+    margin-top: 25px;
+}
+.attorneys-right {
+    max-width: 90%;
+    flex-basis: 90%;
+}
 .attorneys-content h2 {
-    font-size: 20px;
+    font-size: 17px;
+    bottom: 15%;
+    left: 25%;
 }
 .languages-section {
     padding: 50px 0px 60px;
 }
+.contact-section {
+    padding: 65px 0 80px;
+}
+.contact-section .heading {
+    margin-bottom: 10px;
+}
+.contact input {
+    padding: 10px 5px;
+    font-size: 12px;
 }
 
+.contact input[type="submit"] {
+    font-size: 14px; 
+    padding:10px 40px;
+}
+}
+
+
 @media (max-width: 600px){
+    
 .container {
     width: 100%;
-    padding: 0 20px
+    padding: 0 25px
  }
  .logo {
     max-width: 100%;
@@ -591,16 +682,34 @@ nav ul li a {
 a.click-down {
     display: none;
 }
+.whatwedo-section {
+    background-image: none;
+}
+.whatwedo-section .row{
+    justify-content: center;
+}
+.whatwedo {
+    max-width: 85%;
+    flex-basis: 85%;
+    padding: 14px;
+}
+.whatwedo-content img {
+    width: 100%;
+}
 .whoweare-section {
     padding: 50px 0 60px;
 }
+.whoweare-content {
+    max-width: 100%;
+    flex-basis: 100%;
+}
 .whatwedo-section {
     padding: 40px 0px 30px;
-    background-size: 90% 62%;
+    background-size: 90% 65%;
 }
 .attorneys-right {
-    max-width: 55%;
-    flex-basis: 55%;
+    max-width: 85%;
+    flex-basis: 85%;
 }
 .attorneys-left {
     max-width: 70%;
@@ -611,31 +720,69 @@ a.click-down {
     margin-bottom: 14px;
 }
 .ourattorneys-section {
-    padding: 0px 0 70px;
+    padding: 20px 0 70px;
 }
 .attorneys-left .heading {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 .attorneys-content h2 {
-    font-size: 18px;
+    font-size: 22px;
+    bottom: 10%;
+    left: 20%;
+}
+.attorneys-content {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding: 10px;
 }
 .whatwedo-content h2 {
-    font-size: 10px;
+    font-size: 25px;
 }
 .whatwedo-content a {
-    bottom: 25px;
-    font-size: 25px;
+    bottom: 2.5em;
+    font-size: 40px;
 }
 .languages-section {
     padding: 35px 0px 40px;
 }
 
 .heading h1 {
-    font-size: 30px;
-}
-.heading h1 {
-    font-size: 32px;
+    font-size: 24px;
     padding: 15px 0 16px;
+    text-align: center;
+}
+.whoweare-content .heading span {
+    margin: auto;
+}
+.whoweare-section .row {
+    justify-content: center;
+}
+.whoweare-img {
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.whoweare-img img {
+    width: 80%;
+    margin: auto;
+}
+.languages-section .col {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-bottom: 6px;
+}
+.col h2 {
+    font-size: 18px;
+    text-align: center;
+}
+.col p {
+    font-size: 12px;
+}
+.contact-section {
+    padding: 50px 0 52px;
+}
+.contact-section .heading {
+    text-align: center;
+    margin-bottom: 12px;
 }
 .copyright {
     max-width: 100%;
